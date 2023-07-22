@@ -1,1 +1,1 @@
-# financial-manager
+# Менеджер финансов

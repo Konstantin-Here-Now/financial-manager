@@ -4,15 +4,13 @@ import uuid
 from typing_extensions import Annotated
 from decimal import Decimal
 
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import ForeignKey, String, UUID, TIMESTAMP, Numeric
+
+from base import Base
 
 # for often usage
 id_pk = Annotated[str, mapped_column(UUID, primary_key=True, default=uuid.UUID)]
-
-
-class Base(DeclarativeBase):
-    pass
 
 
 class User(Base):
